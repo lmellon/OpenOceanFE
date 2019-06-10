@@ -20,6 +20,8 @@ class App extends Component {
         this.handleView = this.handleView.bind(this);
         this.fetchEntries = this.fetchEntries.bind(this);
         this.setEntries = this.setEntries.bind(this);
+        this.handleCreateEntry = this.handleCreateEntry.bind(this);
+        this.updateArray = this.updateArray.bind(this);
     }
 
     // method to change views
@@ -51,28 +53,29 @@ class App extends Component {
 
     // method to create new entry
     handleCreateEntry (entry) {
-        // fetch('', {
-        //     body: JSON.stringify(entry),
-        //     method: 'POST',
-        //     headers: {
-        //         'Accept': 'application/json, text/plain, */*',
-        //         'Content-Type': 'application/json'
-        //     }
-        // }).then (createdEntry => {
-        //     return createdEntry.json()
-        // }).then( jData => {
-        //     // not sure if we will use these two methods (depends on how many arrays we have)
-        //     updateArray(jData, array)
-        //     this.handleView()
-        // })
+        // console.log('this is handleCreateEntry', entry);
+        fetch('https://openocean-backend.herokuapp.com/form/', {
+            body: JSON.stringify(entry),
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'Content-Type': 'application/json'
+            }
+        }).then (createdEntry => {
+            return createdEntry.json()
+        }).then( jData => {
+            // not sure if we will use these two methods (depends on how many arrays we have)
+            this.updateArray(jData, 'entries')
+            // this.handleView()
+        })
     }
 
     // method to update array
     updateArray(entry, array) {
-        // this.setState( prevState => {
-        //     prevState[array].push(entry)
-        //     return { [array]: prevState[array] }
-        // })
+        this.setState( prevState => {
+            prevState[array].push(entry)
+            return { [array]: prevState[array] }
+        })
     }
 
     // method to delete entry

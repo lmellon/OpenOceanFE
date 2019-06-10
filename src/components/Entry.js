@@ -17,7 +17,7 @@ class Entry extends Component {
                     <h3>{ this.props.entry.author }</h3>
                     <h3>{ this.props.entry.status }</h3>
                     <p>{ this.props.entry.text }</p>
-                    <img src={ this.props.entry.image } />
+                    <img src={ this.props.entry.image } alt="not available"/>
                 </div>
 
                 <div className='entry-action'>

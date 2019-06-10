@@ -18,8 +18,6 @@ class EntryForm extends Component {
             author: '',
             status: 'new'
         }
-        // this.handleChange = this.handleChange.bind(this);
-        // this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     // handle change - takes input and gives it to state

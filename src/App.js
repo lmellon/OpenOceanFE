@@ -22,6 +22,8 @@ class App extends Component {
         this.setEntries = this.setEntries.bind(this);
         this.handleCreateEntry = this.handleCreateEntry.bind(this);
         this.updateArray = this.updateArray.bind(this);
+        this.handleDelete = this.handleDelete.bind(this);
+        this.removeFromArray = this.removeFromArray.bind(this);
     }
 
     // method to change views
@@ -80,22 +82,22 @@ class App extends Component {
 
     // method to delete entry
     handleDelete(entryId, arrayIndex) {
-        // fetch('${entryId}', {
-        //     method: 'DELETE'
-        // }).then(data => {
-        //     // need to determine if the parameter currentArray is necessary
-        //     this.removeFromArray(currentArray, arrayIndex)
-        // }).catch (error =>
-        // console.log("this is your error", error)
-        // )
+        fetch(`https://openocean-backend.herokuapp.com/form/${entryId}`, {
+            method: 'DELETE'
+        }).then(data => {
+            // need to determine if the parameter currentArray is necessary
+            this.removeFromArray('entries', arrayIndex)
+        }).catch (error =>
+        console.log("this is your error", error)
+        )
     }
 
     // method to delete entry from array
     removeFromArray(array, arrayIndex) {
-        // this.setState( prevState => {
-        //     prevState[array].splice(arrayIndex,1)
-        //     return { [array]: prevState[array] }
-        // })
+        this.setState( prevState => {
+            prevState[array].splice(arrayIndex,1)
+            return { [array]: prevState[array] }
+        })
     }
 
     render() {

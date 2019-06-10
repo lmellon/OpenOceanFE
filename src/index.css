@@ -1,0 +1,82 @@
+/* =======================
+        VARIABLES
+======================== */
+:root {
+    --light-pink: #f7d4ec;
+    --magenta: #ae0d7a;
+    --tealish: #448d76;
+    --yellow: #fcba12;
+}
+
+/* ======================
+        HEADER
+ =======================*/
+header {
+    border: 2px solid var(--light-pink);
+    /* text-align: center; */
+}
+
+ul {
+    list-style: none;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: flex-start; */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--light-pink);
+}
+
+li {
+    display: inline;
+    padding: 0.5em;
+    background-color: var(--light-pink);
+}
+
+li:hover {
+    background-color: var(--yellow);
+}
+
+/* ======================
+        ENTRY FORM
+ =======================*/
+fieldset {
+    border: 2px solid var(--tealish);
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+}
+label {
+    padding: 0.5em;
+}
+
+input {
+    font-size: 1em;
+}
+
+input[type="submit"] {
+    padding: 0.25em;
+    margin: 1em;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    border: 2px solid var(--tealish);
+}
+/* ======================
+        ALL ENTRIES
+ =======================*/
+.all-entries {
+    border: 2px solid var(--magenta);
+    margin: 1em;
+    padding: 1em;
+
+}
+
+/* ======================
+            ENTRY
+ =======================*/
+.entry {
+    border: 2px solid var(--yellow);
+}

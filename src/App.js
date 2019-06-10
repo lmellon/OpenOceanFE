@@ -34,7 +34,7 @@ class App extends Component {
 
     // API call
     fetchEntries() {
-        fetch('http://localhost:3000/form')
+        fetch('https://openocean-backend.herokuapp.com/form/')
         .then(data => data.json())
         .then(jData => {
             console.log(jData)

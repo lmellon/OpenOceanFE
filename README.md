@@ -10,7 +10,7 @@ The front end of the application was bootstrapped with [Create React App](https:
 ## Approach Taken
 We drew out our application's architecture to determine the different components we would be creating.  This helped us think through the methods, props and State we would be establishing.  We were able to use this to visualize the flow of the data around/through the application. ![React-Architecture-Blog.pdf](https://github.com/lmellon/OpenOceanFE/files/3276569/React-Architecture-Blog.pdf)
 For our database, we created a table with columns to store our data.  These became the model in our Rails application.  We identified a possibility to add a second table to create a one to many relationship time permitting.
-We pulled out ideas together in a brainstorming session that set us up to breakup the workload and establish a basic timeline for completion. ![Unit 4 Project.pdf](https://github.com/lmellon/OpenOceanFE/files/3276552/Unit.4.Project.pdf)
+We pulled out ideas together in a brainstorming session that set us up to breakup the workload and establish a basic timeline for completion. [Unit 4 Project.pdf](https://github.com/lmellon/OpenOceanFE/files/3276552/Unit.4.Project.pdf)
 
 ## User Stories
 We grouped our user stories into two categories.  One for the basic functionality and one for stretch stories.
@@ -32,5 +32,4 @@ Due to some setbacks with deployment, we were unable to implement the second tab
 * More models or tables
 
 ## See Application
-Front End [Open Ocean](https://afternoon-brook-47049.herokuapp.com/)
-Backend [Open Ocean API] (https://openocean-backend.herokuapp.com/form/)
+Visit the blog [Open Ocean](https://afternoon-brook-47049.herokuapp.com/), or see the database [Open Ocean API](https://openocean-backend.herokuapp.com/form/).

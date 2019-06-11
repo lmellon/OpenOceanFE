@@ -47,7 +47,7 @@ class EntryForm extends Component {
 
     render() {
         return (
-            <div>
+            <div className='form'>
             { this.props.seeForm ?
             <form onSubmit={this.handleSubmit}>
                 <fieldset>

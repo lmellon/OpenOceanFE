@@ -8,12 +8,48 @@
     --yellow: #fdd96b;
     --brown: #592e2d;
     --light-blue: #caddeb;
+
 }
 
 body {
-    background-color: var(--light-blue);
+   /* background-image: url('https://i.imgur.com/9mjA7f9.jpg');*/
+    background-image: url('https://i.imgur.com/DNfdTF7.jpg');
     margin: 0;
+    background-size: cover;
+    background-position: center;
+    height: 80%;
+    background-width: 100%;
+    background-repeat: no-repeat;
+    color: black;
+    font-family: 'Roboto Condensed', sans-serif;
+
+    
+   
 }
+
+button{
+    border: none;
+    margin: 2px;
+    border-radius: 3px;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: pink;
+
+}
+
+img{
+    width: 300px;
+    height: 50%;
+    border: 5px solid white;
+}
+#root{
+    /*background-image: url('https://i.imgur.com/ckrCYLL.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 2000px;
+    width: 100%;*/
+
+}
+
 
 
 
@@ -21,43 +57,59 @@ body {
         HEADER
  =======================*/
 header {
-    border: 2px solid var(--light-pink);
-    background-image: url('https://static01.nyt.com/images/2018/07/10/science/10SCI-ORCAS1/10SCI-ORCAS1-facebookJumbo.jpg');
+    border: 2px solid lightblue;
+    background: rgb(255,138,61);
     background-position: center;
-    background-size: cover;
-    height: 500px;
+    background-image: url('https://i.imgur.com/Zbfck2s.png');
+    padding-bottom: 10px;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 100%;
     position: relative;
+}
+
+.header{
+    background:rgba(170,220,255,.3);
 }
 
 header > h1 {
     text-align: center;
-    margin-top: 4em;
-    color: var(--light-pink);
-    text-shadow: 4px 4px var(--brown);
+    font-size: 2.5em;
+    color: white;
+   
+}
+header > h4 {
+    margin-top: -15px;
+    text-align: center;
+    font-size: 1.8em;
+    color: white;
 }
 
 ul {
-    position: absolute;
+    position: center;
     top: 0;
     list-style: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: var(--light-pink);
+    background-color: lightblue;
 }
 
 li {
+
     display: inline;
     padding: 0.5em;
-    background-color: var(--light-pink);
-    color: var(--brown);
+    background-color: lightblue;
+    color: yellow;
+    font-weight: 30px;
 }
 
 li:hover {
-    background-color: var(--yellow);
+    background-color: pink;
+    cursor: pointer;
 }
 
-/* ======================
+ /*======================
         ENTRY FORM
  =======================*/
 fieldset {
@@ -67,6 +119,7 @@ fieldset {
     width: 80%;
     margin: 0 auto;
     color: var(--brown);
+    background: white;
 }
 label {
     padding: 0.5em;
@@ -79,8 +132,8 @@ input {
 input[type="submit"] {
     padding: 0.25em;
     margin: 1em;
-    border: 2px solid var(--brown);
-    color: var(--brown);
+    border: 2px solid black;
+    color: black;
 }
 
 input[type="submit"]:hover {
@@ -92,15 +145,70 @@ input[type="submit"]:hover {
         ALL ENTRIES
  =======================*/
 .all-entries {
-    border: 2px solid var(--magenta);
-    margin: 1em;
-    padding: 1em;
+    background: rgba(255, 245, 240,.6);
+    margin: 5em;
+    
+    padding-bottom: 75px;
+    text-align: center;
+    border: 1px grey;
+
 
 }
+
+.postTitle{
+    border: 1px solid white;
+    padding: 10px;
+    margin: 50px;
+    margin-bottom: 0;
+}
+
+
 
 /* ======================
             ENTRY
  =======================*/
 .entry {
-    border: 2px solid var(--yellow);
+   /* border: 2px solid var(--yellow);*/
+   padding-bottom: 50px;
+   padding-top: 10px;
+}
+.form{
+    background: pink;
+   
+
+}
+
+
+
+/* mobile responsive*/
+
+
+@media only screen and (max-width: 515px) {
+  body {
+    
+  }
+
+  img{
+    width: 150px;
+  }
+  all-entries {
+    background: rgba(255, 255, 250,.4);
+    margin: 2em;
+    padding: 55px;
+    padding-bottom: 75px;
+    text-align: center;
+    border: 1px grey;
+}
+
+header {
+    border: 2px solid lightblue;
+    background: rgb(255,138,61);
+    background-position: center;
+    background-image: url('https://i.imgur.com/Zbfck2sm.png');
+    padding-bottom: 10px;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 100%;
+    position: relative;
+}
 }

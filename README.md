@@ -1,68 +1,37 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Open Ocean Blog
+Built By Emma Shaffer and Lauren Mellon
 
-## Available Scripts
+## Description
+This project is a full CRUD app with a React frontend and a separate Rails API server. Each of these repositories are hosted on Github and deployed on Heroku.  Since this was also a group project, teamwork was an important aspect as well.
 
-In the project directory, you can run:
+## Technology Used
+The front end of the application was bootstrapped with [Create React App](https://facebook.github.io/create-react-app/).  The backend is built with Postgres, PSQL, Rails and Ruby.  The developer tools used were Github, Google, Slack, Zoom, and our text editors Atom and Sublime.
 
-### `npm start`
+## Approach Taken
+We drew out our application's architecture to determine the different components we would be creating.  This helped us think through the methods, props and State we would be establishing.  We were able to use this to visualize the flow of the data around/through the application. [React-Architecture-Blog.pdf](https://github.com/lmellon/OpenOceanFE/files/3276569/React-Architecture-Blog.pdf)
+For our database, we created a table with columns to store our data.  These became the model in our Rails application.  We identified a possibility to add a second table to create a one to many relationship time permitting.
+We pulled out ideas together in a brainstorming session that set us up to breakup the workload and establish a basic timeline for completion. [Unit 4 Project.pdf](https://github.com/lmellon/OpenOceanFE/files/3276552/Unit.4.Project.pdf)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## User Stories
+We grouped our user stories into two categories.  One for the basic functionality and one for stretch stories.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Basic CRUD functionality
++ User can see all blog entries
++ User can create a blog entry
++ User can delete a blog entry
++ User can edit entry by changing the status( new to old, old to new )
 
-### `npm test`
+Increased functionality
+* User can change the view to see blog entries by status ( all, new, old )
+* User can Like an entry
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Unsolved Problems
+Due to some setbacks with deployment, we were unable to implement the second table, thus creating one to many relationships in our SQL database.
 
-### `npm run build`
+## Improvement Opportunities
+* Increased Filtering capabilities
+* Adding authenticity
+* More models or tables
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## See Application
+Visit the blog [Open Ocean](https://afternoon-brook-47049.herokuapp.com/), or see the database [Open Ocean API](https://openocean-backend.herokuapp.com/form/).

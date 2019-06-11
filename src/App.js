@@ -14,7 +14,8 @@ class App extends Component {
         super(props)
         this.state = {
             currentView: 'all',
-            entries: []
+            entries: [],
+            seeForm: false
         }
         // method binding
         this.handleView = this.handleView.bind(this);
@@ -25,6 +26,7 @@ class App extends Component {
         this.handleDelete = this.handleDelete.bind(this);
         this.removeFromArray = this.removeFromArray.bind(this);
         this.handleStatusChange = this.handleStatusChange.bind(this);
+        this.showForm = this.showForm.bind(this);
     }
 
     // method to change views
@@ -54,6 +56,11 @@ class App extends Component {
         })
     }
 
+    // method to show or hide form
+    showForm() {
+        this.setState( { seeForm: !this.state.seeForm })
+    }
+
     // method to create new entry
     handleCreateEntry (entry) {
         // console.log('this is handleCreateEntry', entry);
@@ -69,7 +76,7 @@ class App extends Component {
         }).then( jData => {
             // not sure if we will use these two methods (depends on how many arrays we have)
             this.updateArray(jData, 'entries')
-            // this.handleView()
+            this.showForm()
         })
     }
 
@@ -145,9 +152,12 @@ class App extends Component {
             <Header
             currentView={this.state.currentView}
             handleView={this.handleView}
+            seeForm={this.state.seeForm}
+            showForm={this.showForm}
             />
             <EntryForm
             handleCreateEntry={this.handleCreateEntry}
+            seeForm={this.state.seeForm}
              />
             <AllEntries
             currentView={this.state.currentView}

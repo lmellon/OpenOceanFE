@@ -13,10 +13,10 @@ class Header extends Component {
             <header>
                 <h1>Open Ocean Blogging</h1>
                     <ul className='nav-bar'>
-                        <em>Filter Entries</em>
-                        <li onClick={ () => {this.props.handleView('all')} }>All</li>
-                        <li onClick={ () => {this.props.handleView('new')} }>New</li>
-                        <li onClick={ () => {this.props.handleView('old')} }>Old</li>
+                        <li onClick={ () => {this.props.handleView('all')} }>Home</li>
+                        <li onClick={ () => {this.props.handleView('new')} }>Recent</li>
+                        <li onClick={ () => {this.props.handleView('old')} }>Archive</li>
+                        <li onClick={ () => {this.props.showForm()} }>New Entry</li>
                     </ul>
             </header>
         );

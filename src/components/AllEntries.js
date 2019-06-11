@@ -10,8 +10,8 @@ import Entry from './Entry'
 // =================
 class AllEntries extends Component {
     render() {
-        console.log(this.props.entries);
-        console.log(this.props.currentView);
+        // console.log(this.props.entries);
+        // console.log(this.props.currentView);
         return (
             <div className="all-entries">
                 <div>{ this.props.entries.filter( (entry) => {
@@ -27,6 +27,7 @@ class AllEntries extends Component {
                     entry={entry}
                     arrayIndex={index}
                     handleDelete={this.props.handleDelete}
+                    handleStatusChange={this.props.handleStatusChange}
                     />
                 )
                 })}

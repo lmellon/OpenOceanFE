@@ -47,6 +47,8 @@ class EntryForm extends Component {
 
     render() {
         return (
+            <div>
+            { this.props.seeForm ?
             <form onSubmit={this.handleSubmit}>
                 <fieldset>
                     <legend>Create New Entry</legend>
@@ -63,6 +65,8 @@ class EntryForm extends Component {
                     <input type='submit' value='Post Entry'/>
                 </fieldset>
             </form>
+            : null }
+            </div>
         );
     }
 }

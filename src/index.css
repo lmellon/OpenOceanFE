@@ -5,8 +5,17 @@
     --light-pink: #f7d4ec;
     --magenta: #ae0d7a;
     --tealish: #448d76;
-    --yellow: #fcba12;
+    --yellow: #fdd96b;
+    --brown: #592e2d;
+    --light-blue: #caddeb;
 }
+
+body {
+    background-color: var(--light-blue);
+    margin: 0;
+}
+
+
 
 /* ======================
         HEADER
@@ -14,6 +23,8 @@
 header {
     border: 2px solid var(--light-pink);
     background-image: url('https://static01.nyt.com/images/2018/07/10/science/10SCI-ORCAS1/10SCI-ORCAS1-facebookJumbo.jpg');
+    background-position: center;
+    background-size: cover;
     height: 500px;
     position: relative;
 }
@@ -22,7 +33,7 @@ header > h1 {
     text-align: center;
     margin-top: 4em;
     color: var(--light-pink);
-    text-shadow: 4px 4px grey;
+    text-shadow: 4px 4px var(--brown);
 }
 
 ul {
@@ -39,6 +50,7 @@ li {
     display: inline;
     padding: 0.5em;
     background-color: var(--light-pink);
+    color: var(--brown);
 }
 
 li:hover {
@@ -49,11 +61,12 @@ li:hover {
         ENTRY FORM
  =======================*/
 fieldset {
-    border: 2px solid var(--tealish);
+    border: 2px solid var(--brown);
     display: flex;
     flex-direction: column;
     width: 80%;
     margin: 0 auto;
+    color: var(--brown);
 }
 label {
     padding: 0.5em;
@@ -66,11 +79,14 @@ input {
 input[type="submit"] {
     padding: 0.25em;
     margin: 1em;
+    border: 2px solid var(--brown);
+    color: var(--brown);
 }
 
 input[type="submit"]:hover {
     cursor: pointer;
-    border: 2px solid var(--tealish);
+    background-color: var(--light-pink);
+    border: 2px solid var(--brown);
 }
 /* ======================
         ALL ENTRIES

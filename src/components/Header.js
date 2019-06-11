@@ -32,3 +32,16 @@ class Header extends Component {
 // EXPORT
 // ================
 export default Header;
+
+// {(() => {
+//           switch(this.props.currentView) {
+//             case 'new':
+//               return <div>'New Entries'</div>
+//             case 'old':
+//               return <div> 'Old Entries'
+//             case 'all':
+//               return <div>
+//             default:
+//               return null
+//           }
+//         })()}

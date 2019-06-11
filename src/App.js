@@ -100,6 +100,21 @@ class App extends Component {
         })
     }
 
+  //   handleEdit(array, arrayIndex){
+  //  if(this.state.editable){
+  //     let name = this.name.value
+  //     let description = this.description.value
+  //     let id = this.props.fruit.id
+  //     let fruit = {id: id, name: name, description: description}
+  //     this.props.handleUpdate(fruit)
+  //   }
+  //   this.setState({
+  //     editable: !this.state.editable
+  //   })
+  // }
+    
+  
+
     render() {
         return (
           <div className="App">

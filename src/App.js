@@ -24,6 +24,7 @@ class App extends Component {
         this.updateArray = this.updateArray.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
         this.removeFromArray = this.removeFromArray.bind(this);
+        this.handleStatusChange = this.handleStatusChange.bind(this);
     }
 
     // method to change views
@@ -100,6 +101,29 @@ class App extends Component {
         })
     }
 
+    // method to change status of entry (new or old)
+    handleStatusChange(entry, entryId) {
+        console.log(entry);
+        if (entry.status === 'new') {
+            entry.status = 'old'
+        } else {
+            entry.status = 'new'
+        }
+        fetch(`https://openocean-backend.herokuapp.com/form/${entry.id}`, {
+            body: JSON.stringify(entry),
+            method: 'PUT',
+            headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'Content-Type': 'application/json'
+            }
+        })
+        .then (updatedEntry => updatedEntry.json())
+        .then(jData => {
+            console.log(jData)
+            this.handleView('new')
+        }).catch(err => console.log('this is the error from handleStatusChange', err))
+    }
+
   //   handleEdit(array, arrayIndex){
   //  if(this.state.editable){
   //     let name = this.name.value
@@ -112,8 +136,8 @@ class App extends Component {
   //     editable: !this.state.editable
   //   })
   // }
-    
-  
+
+
 
     render() {
         return (
@@ -129,6 +153,7 @@ class App extends Component {
             currentView={this.state.currentView}
             entries={this.state.entries}
             handleDelete={this.handleDelete}
+            handleStatusChange={this.handleStatusChange}
             />
 
           </div>

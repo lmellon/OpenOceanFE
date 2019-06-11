@@ -13,14 +13,22 @@
  =======================*/
 header {
     border: 2px solid var(--light-pink);
-    /* text-align: center; */
+    background-image: url('https://static01.nyt.com/images/2018/07/10/science/10SCI-ORCAS1/10SCI-ORCAS1-facebookJumbo.jpg');
+    height: 500px;
+    position: relative;
+}
+
+header > h1 {
+    text-align: center;
+    margin-top: 4em;
+    color: var(--light-pink);
+    text-shadow: 4px 4px grey;
 }
 
 ul {
+    position: absolute;
+    top: 0;
     list-style: none;
-    /* display: flex;
-    flex-direction: row;
-    justify-content: flex-start; */
     margin: 0;
     padding: 0;
     overflow: hidden;

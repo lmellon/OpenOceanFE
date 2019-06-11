@@ -10,9 +10,17 @@ import Entry from './Entry'
 // =================
 class AllEntries extends Component {
     render() {
+        console.log(this.props.entries);
+        console.log(this.props.currentView);
         return (
             <div className="all-entries">
-            { this.props.entries.map((entry, index) => {
+                <div>{ this.props.entries.filter( (entry) => {
+                    if (this.props.currentView === 'all') {
+                        return true
+                    } else {
+                        return this.props.currentView === entry.status
+                    }
+                }).map((entry, index) => {
                 return (
                     <Entry
                     key={index}
@@ -21,7 +29,8 @@ class AllEntries extends Component {
                     handleDelete={this.props.handleDelete}
                     />
                 )
-            })}
+                })}
+                </div>
             </div>
         );
     }

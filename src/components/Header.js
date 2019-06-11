@@ -20,7 +20,7 @@ class Header extends Component {
                     </h2>
                     <ul className='nav-bar'>
                         <li onClick={ () => {this.props.handleView('all')} }>All</li>
-                        <li onClick={ () => {this.props.handleView('newer')} }>New</li>
+                        <li onClick={ () => {this.props.handleView('new')} }>New</li>
                         <li onClick={ () => {this.props.handleView('old')} }>Old</li>
                     </ul>
             </header>
@@ -32,16 +32,3 @@ class Header extends Component {
 // EXPORT
 // ================
 export default Header;
-
-// {(() => {
-//           switch(this.props.currentView) {
-//             case 'new':
-//               return <div>'New Entries'</div>
-//             case 'old':
-//               return <div> 'Old Entries'
-//             case 'all':
-//               return <div>
-//             default:
-//               return null
-//           }
-//         })()}

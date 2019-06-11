@@ -32,5 +32,4 @@ Due to some setbacks with deployment, we were unable to implement the second tab
 * More models or tables
 
 ## See Application
-Front End [Open Ocean](https://afternoon-brook-47049.herokuapp.com/)
-Backend [Open Ocean API](https://openocean-backend.herokuapp.com/form/)
+Visit the blog [Open Ocean](https://afternoon-brook-47049.herokuapp.com/), or see the database [Open Ocean API](https://openocean-backend.herokuapp.com/form/).
